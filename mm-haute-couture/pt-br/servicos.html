@@ -37,7 +37,13 @@
     "provider": {
       "@type": "ClothingStore",
       "name": "Márcia Morais Haute Couture",
-      "address": "Brisbane, Queensland, Australia"
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Albany Creek",
+        "postalCode": "4035",
+        "addressRegion": "QLD",
+        "addressCountry": "AU"
+      }
     }
   }
   </script>
@@ -48,39 +54,39 @@
   <!-- ==========================================================================
        HEADER & GLOBAL NAVIGATION
        ========================================================================== -->
-    <header class="header">
-        <div class="container header-container">
+  <header class="header">
+    <div class="container header-container">
 
-            <a href="index.html" class="brand-logo" aria-label="Márcia Morais Haute Couture Home">
-                <img src="../assets/Logo.png" alt="Logo Márcia Morais" class="brand-logo-img" />
+      <a href="index.html" class="brand-logo" aria-label="Márcia Morais Haute Couture Home">
+        <img src="../assets/Logo.png" alt="Logo Márcia Morais" class="brand-logo-img" />
 
-                <div class="brand-title">
-                    <span class="brand-name">Márcia Morais</span>
-                    <span class="brand-tagline">Haute Couture</span>
-                </div>
-            </a>
-
-            <nav aria-label="Navegação Principal">
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Início</a></li>
-                    <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
-                    <li><a href="servicos.html" class="nav-link active">Serviços</a></li>
-                    <li><a href="eventos.html" class="nav-link">Eventos</a></li>
-                    <li><a href="contato.html" class="nav-link">Contato</a></li>
-                </ul>
-            </nav>
-
-            <a href="contato.html" class="btn btn-outline-gold header-cta-btn">AGENDE UMA CONSULTA</a>
-
-            <!-- Mobile Hamburger Toggle -->
-            <button class="mobile-toggle" aria-label="Alternar menu de navegação" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
+        <div class="brand-title">
+          <span class="brand-name">Márcia Morais</span>
+          <span class="brand-tagline">Haute Couture</span>
         </div>
-    </header>
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+          <li><a href="servicos.html" class="nav-link active">Serviços</a></li>
+          <li><a href="eventos.html" class="nav-link">Eventos</a></li>
+          <li><a href="contato.html" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="contato.html" class="btn btn-outline-gold header-cta-btn">AGENDE UMA CONSULTA</a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" aria-label="Alternar menu de navegação" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
 
   <main style="padding-top: var(--header-height);">
 
@@ -103,7 +109,7 @@
     <section class="section" style="background-color: var(--bg-primary);">
       <div class="container">
         <div class="services-detail-item">
-         
+
           <div class="services-detail-text">
             <span class="tagline">Maestria em Noivas</span>
             <h2>Ajustes para Noivas</h2>
@@ -119,7 +125,7 @@
             </ul>
             <a href="contato.html" class="btn btn-outline">Agende sua Consulta de Noiva</a>
           </div>
-      
+
           <div>
             <div class="before-after-container">
               <div class="before-after-box">
@@ -140,13 +146,13 @@
     <section class="section section-bg-silk" style="background-color: var(--bg-secondary);">
       <div class="container">
         <div class="services-detail-item">
-          
+
           <div>
             <div class="mask-arch" style="max-width: 440px; margin: 0 auto;">
               <img src="../assets/Roupa-1-cortada.png" alt="Alfaiataria para Vestidos de Festa" />
             </div>
           </div>
-      
+
           <div class="services-detail-text">
             <span class="tagline">Elegância Noturna</span>
             <h2>Trajes de Gala e Festa</h2>
@@ -169,7 +175,7 @@
     <section class="section" style="background-color: var(--bg-primary);">
       <div class="container">
         <div class="services-detail-item">
-        
+
           <div class="services-detail-text">
             <span class="tagline">Reestruturação de Heranças</span>
             <h2>Ajustes de Alta-Costura</h2>
@@ -179,7 +185,7 @@
             </p>
             <a href="contato.html" class="btn btn-outline">Consulte sobre Restauração Vintage</a>
           </div>
-   
+
           <div>
             <div class="mask-arch" style="max-width: 440px; margin: 0 auto;">
               <img src="../assets/Roupa-2-cortada.jpg" alt="Ateliê de Reestruturação de Alta-Costura" />
@@ -193,13 +199,13 @@
     <section class="section section-bg-silk" style="background-color: var(--bg-secondary);">
       <div class="container">
         <div class="services-detail-item">
-  
+
           <div>
             <div class="mask-arch" style="max-width: 440px; margin: 0 auto;">
               <img src="../assets/Roupa-4.png" alt="Alfaiataria de Ternos Executivos" />
             </div>
           </div>
-  
+
           <div class="services-detail-text">
             <span class="tagline">Presença Sartorial</span>
             <h2>Alfaiataria Executiva</h2>
@@ -272,6 +278,17 @@
       </div>
     </section>
 
+    <!-- SERVICE COVERAGE -->
+    <section class="section" style="background-color: var(--bg-secondary); padding: 50px 0;">
+      <div class="container text-center" style="max-width: 860px;">
+        <span class="tagline">Região & Atendimentos Privativos</span>
+        <h2 style="font-size: 1.8rem; margin-bottom: 16px; color: #111111;">Área de Atendimento</h2>
+        <p style="font-size: 1.05rem; line-height: 1.7; color: #111111;">
+          Atendendo à região da Grande Brisbane, QLD (Albany Creek, Bridgeman Downs, Chermside, Aspley e bairros vizinhos. Provas a domicílio disponíveis mediante agendamento).
+        </p>
+      </div>
+    </section>
+
     <!-- PARCERIAS B2B -->
     <section class="section section-bg-silk" style="background-color: var(--bg-primary); padding-top: 60px;">
       <div class="container">
@@ -316,7 +333,8 @@
             </div>
           </div>
           <p>
-           Ajustes privativos de noivas, trajes de noite e alfaiataria executiva em Brisbane, Austrália. Confiança é algo que você veste.
+            Ajustes privativos de noivas, trajes de noite e alfaiataria executiva em Brisbane, Austrália. Confiança é
+            algo que você veste.
           </p>
         </div>
 
@@ -347,10 +365,13 @@
           <h4 class="footer-heading">Atelier Brisbane</h4>
           <p style="font-size: 0.88rem; color: var(--text-light-muted); margin-bottom: 8px;">
             Atendimento Exclusivo com Hora Marcada <br />
-            Brisbane, QLD, Austrália
+            Albany Creek, Brisbane North
           </p>
           <p class="text-gold">
-            WhatsApp: +61 401 185 923 <br />
+            WhatsApp: <a
+              href="https://wa.me/61401185923?text=Ol%C3%A1%20Atelier%20M%C3%A1rcia%20Morais,%20gostaria%20de%20agendar%20uma%20consulta."
+              target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">+61 401 185
+              923</a> <br />
             ABN: 33 508 568 355
           </p>
         </div>

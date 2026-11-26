@@ -44,6 +44,15 @@
         "addressRegion": "QLD",
         "addressCountry": "AU"
       }
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Bespoke Couture Packages",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bridal Signature Fit", "description": "Custom Quote Upon Private Fitting" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formal Elegance", "description": "Bespoke Alterations Tailored to Your Gown" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Executive Tailoring", "description": "Private In-Studio Consultation" } }
+      ]
     }
   }
   </script>
@@ -224,54 +233,57 @@
       <div class="container">
         <div>
           <div class="tiers-header">
-            <span class="tagline">Padrões Transparentes</span>
-            <h2>Pacotes e Níveis Comerciais</h2>
-            <p>Selecione o pacote adequado à complexidade da sua peça.</p>
+            <span class="tagline">Padrões de Excelência</span>
+            <h2>Pacotes de Atendimento Exclusivos</h2>
+            <p>Cada pacote é pensado para a complexidade e elegância da sua peça.</p>
             <div class="divider-gold"></div>
           </div>
 
           <div class="tiers-grid">
-            <!-- Pacote Essencial -->
-            <div class="tier-card">
-              <div class="tier-name">Essencial</div>
-              <div class="tier-desc">Ideal para ajustes diretos de bainha e pequenos refinamentos de tamanho.</div>
-              <ul class="tier-features">
-                <li>1 Sessão de Prova Privativa</li>
-                <li>Ajustes Padrão de Bainha e Cintura</li>
-                <li>Passadoria da Peça (Steaming)</li>
-                <li>Prazo de 10 Dias Úteis</li>
-              </ul>
-              <a href="contato.html" class="btn btn-outline">Selecionar Essencial</a>
-            </div>
-
-            <!-- Pacote Premium -->
+            <!-- Pacote 1: Bridal Signature Fit -->
             <div class="tier-card featured">
               <div class="tier-badge">Mais Solicitado</div>
-              <div class="tier-name">Premium</div>
-              <div class="tier-desc">Reestruturação abrangente para trajes de gala e vestidos de madrinha.</div>
+              <div class="tier-name">Bridal Signature Fit</div>
+              <div class="tier-pricing">Custom Quote Upon Private Fitting</div>
+              <div class="tier-desc">Atendimento de alta-costura para vestidos de noiva de luxo e véus de família.</div>
               <ul class="tier-features">
-                <li>2 Sessões de Prova Privativas</li>
-                <li>Reestruturação Completa de Silhueta e Corpete</li>
-                <li>Estruturação de Suporte e Armação (Bustle)</li>
-                <li>Embalagem de Luxo para a Peça</li>
-                <li>Agendamento Prioritário</li>
+                <li>Sessões de Prova Privativas Ilimitadas</li>
+                <li>Reestruturação Completa de Silhueta, Corpete e Cauda</li>
+                <li>Ajustes Manuais de Rendas Francesas e Aplicações</li>
+                <li>Estruturação Interna, Barbatanas e Armação (Bustle)</li>
+                <li>Embalagem Exclusiva de Lembrança de Luxo</li>
               </ul>
-              <a href="contato.html" class="btn btn-outline">Selecionar Premium</a>
+              <a href="contato.html" class="btn btn-gold">Agendar Consulta</a>
             </div>
 
-            <!-- Pacote Assinatura -->
+            <!-- Pacote 2: Formal Elegance -->
             <div class="tier-card">
-              <div class="tier-name">Assinatura</div>
-              <div class="tier-desc">Tratamento de alta-costura para vestidos de luxo complexos e peças de alto valor.
-              </div>
+              <div class="tier-name">Formal Elegance</div>
+              <div class="tier-pricing">Bespoke Alterations Tailored to Your Gown</div>
+              <div class="tier-desc">Escultura sob medida para vestidos de gala, trajes de noite e madrinhas.</div>
               <ul class="tier-features">
-                <li>Sessões de Prova Ilimitadas</li>
-                <li>Reestruturação Complexa de Renda e Pedraria à Mão</li>
-                <li>Acesso Direto à Master Tailor</li>
-                <li>Opção de Urgência Expressa Disponível</li>
-                <li>Embalagem Exclusiva de Lembrança</li>
+                <li>2 Sessões de Prova Dedicadas no Studio</li>
+                <li>Ajustes de Decote, Cintura e Caimento Perfeito</li>
+                <li>Bainhas Milimétricas em Seda, Cetim e Tule</li>
+                <li>Modificações Sob Medida de Bojo e Alças</li>
+                <li>Passadoria a Vapor e Embalagem Protetora de Luxo</li>
               </ul>
-              <a href="contato.html" class="btn btn-outline">Selecionar Assinatura</a>
+              <a href="contato.html" class="btn btn-outline">Solicitar Prova</a>
+            </div>
+
+            <!-- Pacote 3: Executive Tailoring -->
+            <div class="tier-card">
+              <div class="tier-name">Executive Tailoring</div>
+              <div class="tier-pricing">Private In-Studio Consultation</div>
+              <div class="tier-desc">Ajustes sartoriais precisos para blazers, ternos de luxo e alfaiataria executiva.</div>
+              <ul class="tier-features">
+                <li>Consulta de Alfaiataria Privativa no Studio</li>
+                <li>Alinhamento de Silhueta para Blazers e Paletós</li>
+                <li>Refinamentos de Bainha, Cintura e Afunilamento</li>
+                <li>Contorno de Ombreiras e Comprimento de Mangas</li>
+                <li>Agendamento e Prazos com Prioridade</li>
+              </ul>
+              <a href="contato.html" class="btn btn-outline">Agendar Consulta</a>
             </div>
           </div>
         </div>
@@ -385,6 +397,8 @@
     </div>
   </footer>
 
+  <script src="../analytics-config.js"></script>
+  <script src="../analytics.js"></script>
   <script src="../script.js"></script>
 </body>
 

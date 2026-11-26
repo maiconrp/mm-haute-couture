@@ -185,34 +185,69 @@
 
           <!-- BOOKING FORM -->
           <div>
-            <form id="booking-form" class="contact-form">
-              <h3 style="margin-bottom: 24px; font-size: 1.8rem;">Request Consultation</h3>
+            <form id="booking-form" class="contact-form" data-booking-api="api/calendar.php">
+              <div class="contact-form-heading">
+                <span class="tagline text-gold">Private atelier service</span>
+                <h3>Request a Consultation</h3>
+                <p>Share your details, preferred fitting mode, and appointment time.</p>
+              </div>
 
               <div class="form-group">
                 <label for="full-name" class="form-label">Full Name *</label>
-                <input type="text" id="full-name" class="form-input" placeholder="e.g. Victoria Sterling" required />
+                <input type="text" id="full-name" class="form-input" placeholder="e.g. Victoria Sterling"
+                  autocomplete="name" required />
               </div>
 
               <div class="form-row">
                 <div class="form-group">
                   <label for="email" class="form-label">Email Address *</label>
-                  <input type="email" id="email" class="form-input" placeholder="name@domain.com" required />
+                  <input type="email" id="email" class="form-input" placeholder="name@domain.com"
+                    autocomplete="email" required />
                 </div>
                 <div class="form-group">
                   <label for="phone" class="form-label">Phone / WhatsApp *</label>
-                  <input type="tel" id="phone" class="form-input" placeholder="+61 401 185 923" required />
+                  <input type="tel" id="phone" class="form-input" placeholder="+61 401 185 923"
+                    autocomplete="tel" required />
                 </div>
+              </div>
+
+              <fieldset class="fitting-mode-group">
+                <legend class="form-label">Fitting Mode *</legend>
+                <div class="fitting-mode-options">
+                  <label class="fitting-mode-option">
+                    <input type="radio" name="fitting-mode" value="atelier" checked />
+                    <span class="fitting-mode-copy">
+                      <strong>Atelier Private Fitting</strong>
+                      <span>In-studio appointment · Albany Creek, QLD</span>
+                    </span>
+                  </label>
+                  <label class="fitting-mode-option">
+                    <input type="radio" name="fitting-mode" value="mobile" />
+                    <span class="fitting-mode-copy">
+                      <strong>Mobile / In-City Fitting</strong>
+                      <span>Private fitting at your preferred address</span>
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="form-group offsite-fields" id="offsite-fields" hidden>
+                <label for="fitting-address" class="form-label">Address or Preferred Area *</label>
+                <input type="text" id="fitting-address" class="form-input" maxlength="300"
+                  placeholder="Street address or Brisbane suburb" autocomplete="street-address"
+                  aria-describedby="travel-fee-note" />
+                <p class="booking-note" id="travel-fee-note">Travel fee applies to all off-site appointments.</p>
               </div>
 
               <div class="form-row">
                 <div class="form-group">
                   <label for="service-type" class="form-label">Service Required *</label>
                   <select id="service-type" class="form-select" required>
-                    <option value="" disabled selected>Select service...</option>
-                    <option value="Bridal Alterations">Bridal Alterations</option>
-                    <option value="Formal & Evening Wear">Formal & Evening Wear</option>
-                    <option value="Couture Adjustments">Couture Adjustments</option>
+                    <option value="" disabled selected>Select service or package...</option>
+                    <option value="Bridal Signature Fit">Bridal Signature Fit</option>
+                    <option value="Formal Elegance">Formal Elegance</option>
                     <option value="Executive Tailoring">Executive Tailoring</option>
+                    <option value="Couture Adjustments">Couture Adjustments</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -222,12 +257,28 @@
               </div>
 
               <div class="form-group">
+                <label for="appointment-date" class="form-label">Appointment Date *</label>
+                <input type="date" id="appointment-date" class="form-input" required />
+                <button type="button" class="btn-pill-gold availability-refresh" id="refresh-availability">
+                  Refresh available times
+                </button>
+              </div>
+              <fieldset class="appointment-slots-group">
+                <legend class="form-label">Available Appointment Times * (Brisbane time)</legend>
+                <div id="appointment-slots" class="appointment-slots" role="group"
+                  aria-label="Available appointment times"></div>
+              </fieldset>
+              <p id="booking-status" class="booking-status" role="status" aria-live="polite"></p>
+
+              <div class="form-group">
                 <label for="message" class="form-label">Garment Details & Message</label>
                 <textarea id="message" class="form-textarea"
                   placeholder="Tell us about your garment, designer, or specific fit requirements..."></textarea>
               </div>
 
-              <button type="submit" class="btn btn-gold" style="width: 100%;">Submit Appointment Request</button>
+              <button type="submit" class="btn btn-gold booking-submit" style="width: 100%;" disabled>
+                Confirm Appointment
+              </button>
             </form>
           </div>
         </div>
@@ -241,8 +292,7 @@
         </div>
         <h2>Thank You, <span id="modal-client-name">Valued Client</span></h2>
         <div class="divider-gold"></div>
-        <p>Your appointment request has been received with high priority. Márcia Morais Atelier will contact you shortly
-          to confirm your fitting date.</p>
+        <p id="booking-confirmation-message">Your fitting is confirmed in the atelier calendar.</p>
         <button id="close-modal-btn" class="btn btn-outline-gold" style="margin-top: 20px;">Close Window</button>
       </div>
     </div>
@@ -322,6 +372,8 @@
     </div>
   </footer>
 
+  <script src="analytics-config.js"></script>
+  <script src="analytics.js"></script>
   <script src="script.js"></script>
 </body>
 
